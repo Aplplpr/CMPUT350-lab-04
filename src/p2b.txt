@@ -1,0 +1,18 @@
+15493@LegionPotato UCRT64 /e/1uab/2026fall/350/4/CMPUT350-lab-04
+$ ./debug/p2b.exe
+64534
+24827
+
+
+15493@LegionPotato UCRT64 /e/1uab/2026fall/350/4/CMPUT350-lab-04
+$ cmake --build release
+[0/2] Re-checking globbed directories...
+[4/5] Linking CXX executable p2b.exe
+
+
+15493@LegionPotato UCRT64 /e/1uab/2026fall/350/4/CMPUT350-lab-04
+$ ./release/p2b.exe
+6989
+8942
+
+The row major convolution is faster than Morton order convolution in the release build, while Morton order is faster in the debug build. This might be caused by compiler optimization, the row-major loops have regular memory accesses and fixed sizes, allows compiler to optimize repeated indexing and loop operations more effectively.

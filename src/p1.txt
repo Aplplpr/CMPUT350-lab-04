@@ -1,0 +1,6 @@
+15493@LegionPotato UCRT64 /e/1uab/2026fall/350/4/CMPUT350-lab-04
+$ ./debug/p1.exe
+23206 347898375840389362
+68024 347898375840389362
+
+Row-major traversal is faster because it accesses contiguous memory, so it has better cache locality. Column-major traversal jumps between rows in memory, causing more cache misses and therefore taking longer.
